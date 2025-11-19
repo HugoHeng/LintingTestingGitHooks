@@ -1,6 +1,12 @@
+import pytest
 from app import app
 
-def test_health_endpoint(): 
-    client = app.test_client()
+
+@pytest.fixture
+def client():
+    app.testing = True
+    return app.test_client()
+
+def test_endpoint(client): 
     response = client.get("/") 
     assert response.status_code == 200 
