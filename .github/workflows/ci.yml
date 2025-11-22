@@ -23,9 +23,9 @@ jobs:
           pip install -r requirements.txt
           pip install ruff pytest flask
 
-        -name: Linting running
+        - name: Linting running
           run: |
             ruff check app
-        -name: Run Pytest 
+        - name: Run Pytest 
           run: |
             pytest tests
