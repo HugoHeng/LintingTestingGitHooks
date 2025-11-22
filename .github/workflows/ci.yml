@@ -3,7 +3,7 @@ name: CI Checks
 on:
   pull_request:
     branches:
-      - [cite-start]dev
+      - dev
 
 jobs: 
   linting:
